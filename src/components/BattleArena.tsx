@@ -154,11 +154,13 @@ const BattleArena = () => {
             </div>
 
             {/* VS Divider */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="bg-accent text-accent-foreground px-8 py-4 rounded-full text-5xl font-black shadow-lg shadow-accent/50 border-4 border-accent-foreground/20">
-                VS
+            {!winner && (
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="bg-accent text-accent-foreground px-8 py-4 rounded-full text-5xl font-black shadow-lg shadow-accent/50 border-4 border-accent-foreground/20">
+                  VS
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Santa */}
             <div className="space-y-4">
