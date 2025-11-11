@@ -16,6 +16,7 @@ import kovacsDavidFighter from "@/assets/kovacs-david-fighter.png";
 import palGretaFighter from "@/assets/pal-greta-fighter.png";
 import fazekasEszterFighter from "@/assets/fazekas-eszter-fighter.png";
 import customFighter from "@/assets/custom-fighter.png";
+import koFighter from "@/assets/ko-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -156,6 +157,15 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 15,
     attackSpeed: 1000,
+  },
+  {
+    id: "ko",
+    name: "KO",
+    image: koFighter,
+    color: "ko",
+    maxHealth: 160,
+    strength: 12,
+    attackSpeed: 2400,
   },
 ];
 

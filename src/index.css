@@ -52,6 +52,7 @@ All colors MUST be HSL.
     --pal-greta: 340 70% 55%;
     --fazekas-eszter: 170 65% 50%;
     --custom: 220 70% 50%;
+    --ko: 30 60% 40%;
     --battle-glow: 0 0% 100%;
     
     --gradient-battle: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));

@@ -71,6 +71,7 @@ export default {
         "pal-greta": "hsl(var(--pal-greta))",
         "fazekas-eszter": "hsl(var(--fazekas-eszter))",
         custom: "hsl(var(--custom))",
+        ko: "hsl(var(--ko))",
         "battle-glow": "hsl(var(--battle-glow))",
         levente: "hsl(var(--accent))",
       },

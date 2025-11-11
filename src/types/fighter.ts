@@ -13,7 +13,8 @@ export type FighterType =
   | "kovacs-david"
   | "pal-greta"
   | "fazekas-eszter"
-  | "custom";
+  | "custom"
+  | "ko";
 
 export interface Fighter {
   id: FighterType;
