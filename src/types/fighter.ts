@@ -9,7 +9,11 @@ export type FighterType =
   | "fortnite" 
   | "thanos" 
   | "tota-oliver" 
-  | "jakab-istvan";
+  | "jakab-istvan"
+  | "kovacs-david"
+  | "pal-greta"
+  | "fazekas-eszter"
+  | "custom";
 
 export interface Fighter {
   id: FighterType;

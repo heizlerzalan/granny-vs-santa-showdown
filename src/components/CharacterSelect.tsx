@@ -12,6 +12,10 @@ import fortniteFighter from "@/assets/fortnite-fighter.png";
 import thanosFighter from "@/assets/thanos-fighter.png";
 import totaOliverFighter from "@/assets/tota-oliver-fighter.png";
 import jakabIstvanFighter from "@/assets/jakab-istvan-fighter.png";
+import kovacsDavidFighter from "@/assets/kovacs-david-fighter.png";
+import palGretaFighter from "@/assets/pal-greta-fighter.png";
+import fazekasEszterFighter from "@/assets/fazekas-eszter-fighter.png";
+import customFighter from "@/assets/custom-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -61,7 +65,7 @@ export const fighters: Fighter[] = [
     color: "heizler-zalan",
     maxHealth: 105,
     strength: 16,
-    attackSpeed: 1000,
+    attackSpeed: 800,
   },
   {
     id: "szabo-agoston",
@@ -95,7 +99,7 @@ export const fighters: Fighter[] = [
     name: "THANOS",
     image: thanosFighter,
     color: "thanos",
-    maxHealth: 200,
+    maxHealth: 180,
     strength: 25,
     attackSpeed: 2000,
   },
@@ -116,6 +120,42 @@ export const fighters: Fighter[] = [
     maxHealth: 115,
     strength: 17,
     attackSpeed: 1300,
+  },
+  {
+    id: "kovacs-david",
+    name: "KOVÁCS DÁVID",
+    image: kovacsDavidFighter,
+    color: "kovacs-david",
+    maxHealth: 108,
+    strength: 15,
+    attackSpeed: 1050,
+  },
+  {
+    id: "pal-greta",
+    name: "PÁL GRÉTA",
+    image: palGretaFighter,
+    color: "pal-greta",
+    maxHealth: 95,
+    strength: 21,
+    attackSpeed: 850,
+  },
+  {
+    id: "fazekas-eszter",
+    name: "FAZEKAS ESZTER",
+    image: fazekasEszterFighter,
+    color: "fazekas-eszter",
+    maxHealth: 100,
+    strength: 19,
+    attackSpeed: 950,
+  },
+  {
+    id: "custom",
+    name: "CUSTOM FIGHTER",
+    image: customFighter,
+    color: "custom",
+    maxHealth: 100,
+    strength: 15,
+    attackSpeed: 1000,
   },
 ];
 
@@ -191,11 +231,29 @@ export const CharacterSelect = ({ onStartBattle }: CharacterSelectProps) => {
                   </div>
                   
                   {isSelected && (
-                    <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-current animate-fade-in">
-                      <span className={`text-xl font-black text-${fighter.color}`}>
-                        {isSelected1 ? "FIGHTER 1" : "FIGHTER 2"}
-                      </span>
-                    </div>
+                    <>
+                      <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-current animate-fade-in">
+                        <span className={`text-xl font-black text-${fighter.color}`}>
+                          {isSelected1 ? "FIGHTER 1" : "FIGHTER 2"}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm p-3 border-t-2 border-current animate-fade-in">
+                        <div className="space-y-1 text-xs font-bold">
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">HP:</span>
+                            <span className={`text-${fighter.color}`}>{fighter.maxHealth}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">STR:</span>
+                            <span className={`text-${fighter.color}`}>{fighter.strength}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">SPD:</span>
+                            <span className={`text-${fighter.color}`}>{(2000 - fighter.attackSpeed) / 10}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
                   )}
                   
                   {!isSelected && !isDisabled && (
