@@ -53,6 +53,13 @@ All colors MUST be HSL.
     --fazekas-eszter: 170 65% 50%;
     --custom: 220 70% 50%;
     --ko: 30 60% 40%;
+    --nadler-balazs: 35 80% 55%;
+    --nadler-somogyi-laura: 320 75% 60%;
+    --teki-teknos: 120 60% 45%;
+    --kenvo: 290 70% 55%;
+    --bata-botond: 190 65% 50%;
+    --bennet: 20 70% 50%;
+    --budai-imre: 40 55% 45%;
     --battle-glow: 0 0% 100%;
     
     --gradient-battle: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));

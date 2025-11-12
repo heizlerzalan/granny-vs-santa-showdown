@@ -17,6 +17,13 @@ import palGretaFighter from "@/assets/pal-greta-fighter.png";
 import fazekasEszterFighter from "@/assets/fazekas-eszter-fighter.png";
 import customFighter from "@/assets/custom-fighter.png";
 import koFighter from "@/assets/ko-fighter.png";
+import nadlerBalazsFighter from "@/assets/nadler-balazs-fighter.png";
+import nadlerSomogyiLauraFighter from "@/assets/nadler-somogyi-laura-fighter.png";
+import tekiTeknosFighter from "@/assets/teki-teknos-fighter.png";
+import kenvoFighter from "@/assets/kenvo-fighter.png";
+import bataBotondFighter from "@/assets/bata-botond-fighter.png";
+import bennetFighter from "@/assets/bennet-fighter.png";
+import budaiImreFighter from "@/assets/budai-imre-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -46,9 +53,9 @@ export const fighters: Fighter[] = [
     name: "BORBÉLY LEVENTE",
     image: leventeFighter,
     color: "accent",
-    maxHealth: 110,
-    strength: 14,
-    attackSpeed: 1100,
+    maxHealth: 100,
+    strength: 30,
+    attackSpeed: 1150,
   },
   {
     id: "mucsy-laci",
@@ -75,7 +82,7 @@ export const fighters: Fighter[] = [
     color: "szabo-agoston",
     maxHealth: 130,
     strength: 20,
-    attackSpeed: 1600,
+    attackSpeed: 1400,
   },
   {
     id: "simai-botond",
@@ -109,7 +116,7 @@ export const fighters: Fighter[] = [
     name: "TÓTA OLIVÉR",
     image: totaOliverFighter,
     color: "tota-oliver",
-    maxHealth: 85,
+    maxHealth: 90,
     strength: 22,
     attackSpeed: 700,
   },
@@ -166,6 +173,69 @@ export const fighters: Fighter[] = [
     maxHealth: 160,
     strength: 12,
     attackSpeed: 2400,
+  },
+  {
+    id: "nadler-balazs",
+    name: "NÁDLER BALÁZS",
+    image: nadlerBalazsFighter,
+    color: "nadler-balazs",
+    maxHealth: 105,
+    strength: 16,
+    attackSpeed: 1200,
+  },
+  {
+    id: "nadler-somogyi-laura",
+    name: "NÁDLER-SOMOGYI LAURA",
+    image: nadlerSomogyiLauraFighter,
+    color: "nadler-somogyi-laura",
+    maxHealth: 95,
+    strength: 18,
+    attackSpeed: 900,
+  },
+  {
+    id: "teki-teknos",
+    name: "TEKI A TEKNŐS",
+    image: tekiTeknosFighter,
+    color: "teki-teknos",
+    maxHealth: 150,
+    strength: 10,
+    attackSpeed: 2200,
+  },
+  {
+    id: "kenvo",
+    name: "KENVO",
+    image: kenvoFighter,
+    color: "kenvo",
+    maxHealth: 110,
+    strength: 17,
+    attackSpeed: 1000,
+  },
+  {
+    id: "bata-botond",
+    name: "BATA BOTOND",
+    image: bataBotondFighter,
+    color: "bata-botond",
+    maxHealth: 100,
+    strength: 15,
+    attackSpeed: 1100,
+  },
+  {
+    id: "bennet",
+    name: "BENNET",
+    image: bennetFighter,
+    color: "bennet",
+    maxHealth: 70,
+    strength: 8,
+    attackSpeed: 600,
+  },
+  {
+    id: "budai-imre",
+    name: "BUDAI IMRE",
+    image: budaiImreFighter,
+    color: "budai-imre",
+    maxHealth: 135,
+    strength: 19,
+    attackSpeed: 1700,
   },
 ];
 

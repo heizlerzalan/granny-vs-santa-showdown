@@ -14,7 +14,14 @@ export type FighterType =
   | "pal-greta"
   | "fazekas-eszter"
   | "custom"
-  | "ko";
+  | "ko"
+  | "nadler-balazs"
+  | "nadler-somogyi-laura"
+  | "teki-teknos"
+  | "kenvo"
+  | "bata-botond"
+  | "bennet"
+  | "budai-imre";
 
 export interface Fighter {
   id: FighterType;
