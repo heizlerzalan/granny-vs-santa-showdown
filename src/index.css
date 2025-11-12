@@ -60,6 +60,12 @@ All colors MUST be HSL.
     --bata-botond: 190 65% 50%;
     --bennet: 20 70% 50%;
     --budai-imre: 40 55% 45%;
+    --sulyok-csanad: 50 60% 50%;
+    --csonno-balint: 0 5% 35%;
+    --kovari-daniella: 260 65% 55%;
+    --nemecz-levente: 240 40% 40%;
+    --rampasek-attila: 10 70% 45%;
+    --barath-barnabas: 200 60% 50%;
     --battle-glow: 0 0% 100%;
     
     --gradient-battle: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));

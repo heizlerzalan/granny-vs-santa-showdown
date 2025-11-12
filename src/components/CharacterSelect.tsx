@@ -24,6 +24,12 @@ import kenvoFighter from "@/assets/kenvo-fighter.png";
 import bataBotondFighter from "@/assets/bata-botond-fighter.png";
 import bennetFighter from "@/assets/bennet-fighter.png";
 import budaiImreFighter from "@/assets/budai-imre-fighter.png";
+import sulyokCsanadFighter from "@/assets/sulyok-csanad-fighter.png";
+import csonnoBalintFighter from "@/assets/csonno-balint-fighter.png";
+import kovariDaniellaFighter from "@/assets/kovari-daniella-fighter.png";
+import nemeczLeventeFighter from "@/assets/nemecz-levente-fighter.png";
+import rampasekAttilaFighter from "@/assets/rampasek-attila-fighter.png";
+import barathBarnabasFighter from "@/assets/barath-barnabas-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -73,7 +79,7 @@ export const fighters: Fighter[] = [
     color: "heizler-zalan",
     maxHealth: 105,
     strength: 16,
-    attackSpeed: 800,
+    attackSpeed: 750,
   },
   {
     id: "szabo-agoston",
@@ -236,6 +242,60 @@ export const fighters: Fighter[] = [
     maxHealth: 135,
     strength: 19,
     attackSpeed: 1700,
+  },
+  {
+    id: "sulyok-csanad",
+    name: "SULYOK CSANÁD",
+    image: sulyokCsanadFighter,
+    color: "sulyok-csanad",
+    maxHealth: 70,
+    strength: 8,
+    attackSpeed: 1600,
+  },
+  {
+    id: "csonno-balint",
+    name: "CSONNÓ BÁLINT",
+    image: csonnoBalintFighter,
+    color: "csonno-balint",
+    maxHealth: 75,
+    strength: 14,
+    attackSpeed: 1100,
+  },
+  {
+    id: "kovari-daniella",
+    name: "KÖVÁRI DANIELLA",
+    image: kovariDaniellaFighter,
+    color: "kovari-daniella",
+    maxHealth: 80,
+    strength: 29,
+    attackSpeed: 1200,
+  },
+  {
+    id: "nemecz-levente",
+    name: "NEMECZ LEVENTE",
+    image: nemeczLeventeFighter,
+    color: "nemecz-levente",
+    maxHealth: 220,
+    strength: 8,
+    attackSpeed: 1700,
+  },
+  {
+    id: "rampasek-attila",
+    name: "RAMPASEK ATTILA",
+    image: rampasekAttilaFighter,
+    color: "rampasek-attila",
+    maxHealth: 70,
+    strength: 16,
+    attackSpeed: 1050,
+  },
+  {
+    id: "barath-barnabas",
+    name: "BARÁTH BARNABÁS",
+    image: barathBarnabasFighter,
+    color: "barath-barnabas",
+    maxHealth: 100,
+    strength: 14,
+    attackSpeed: 1000,
   },
 ];
 

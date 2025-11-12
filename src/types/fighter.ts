@@ -21,7 +21,13 @@ export type FighterType =
   | "kenvo"
   | "bata-botond"
   | "bennet"
-  | "budai-imre";
+  | "budai-imre"
+  | "sulyok-csanad"
+  | "csonno-balint"
+  | "kovari-daniella"
+  | "nemecz-levente"
+  | "rampasek-attila"
+  | "barath-barnabas";
 
 export interface Fighter {
   id: FighterType;
