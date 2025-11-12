@@ -30,6 +30,9 @@ import kovariDaniellaFighter from "@/assets/kovari-daniella-fighter.png";
 import nemeczLeventeFighter from "@/assets/nemecz-levente-fighter.png";
 import rampasekAttilaFighter from "@/assets/rampasek-attila-fighter.png";
 import barathBarnabasFighter from "@/assets/barath-barnabas-fighter.png";
+import kobanLaciFighter from "@/assets/koban-laci-fighter.png";
+import pinterZsomborFighter from "@/assets/pinter-zsombor-fighter.png";
+import koronczaiFighter from "@/assets/koronczai-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -296,6 +299,33 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 14,
     attackSpeed: 1000,
+  },
+  {
+    id: "koban-laci",
+    name: "KOBÁN LACI",
+    image: kobanLaciFighter,
+    color: "koban-laci",
+    maxHealth: 25,
+    strength: 50,
+    attackSpeed: 200,
+  },
+  {
+    id: "pinter-zsombor",
+    name: "PINTÉR ZSOMBOR",
+    image: pinterZsomborFighter,
+    color: "pinter-zsombor",
+    maxHealth: 100,
+    strength: 15,
+    attackSpeed: 1100,
+  },
+  {
+    id: "koronczai",
+    name: "KORONCZAI",
+    image: koronczaiFighter,
+    color: "koronczai",
+    maxHealth: 110,
+    strength: 30,
+    attackSpeed: 1500,
   },
 ];
 

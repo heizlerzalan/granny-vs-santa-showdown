@@ -27,7 +27,10 @@ export type FighterType =
   | "kovari-daniella"
   | "nemecz-levente"
   | "rampasek-attila"
-  | "barath-barnabas";
+  | "barath-barnabas"
+  | "koban-laci"
+  | "pinter-zsombor"
+  | "koronczai";
 
 export interface Fighter {
   id: FighterType;
