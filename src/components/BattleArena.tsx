@@ -23,20 +23,79 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
   const [showFighter2Hit, setShowFighter2Hit] = useState(false);
   const [lastFighter1Damage, setLastFighter1Damage] = useState(0);
   const [lastFighter2Damage, setLastFighter2Damage] = useState(0);
+  
+  // Boost system states
+  const [fighter1Boosts, setFighter1Boosts] = useState(3);
+  const [fighter2Boosts, setFighter2Boosts] = useState(3);
+  const [fighter1DoubleNextHit, setFighter1DoubleNextHit] = useState(false);
+  const [fighter2DoubleNextHit, setFighter2DoubleNextHit] = useState(false);
+  const [fighter1PowerMode, setFighter1PowerMode] = useState(false);
+  const [fighter2PowerMode, setFighter2PowerMode] = useState(false);
+
+  const useFighter1Boost = (boostType: 'double' | 'heal' | 'power') => {
+    if (fighter1Boosts <= 0 || !isBattling) return;
+    
+    setFighter1Boosts(prev => prev - 1);
+    
+    if (boostType === 'double') {
+      setFighter1DoubleNextHit(true);
+    } else if (boostType === 'heal') {
+      setFighter1Health(prev => Math.min(fighter1.maxHealth, prev + 15));
+    } else if (boostType === 'power') {
+      setFighter1PowerMode(true);
+      setTimeout(() => setFighter1PowerMode(false), 5000);
+    }
+  };
+
+  const useFighter2Boost = (boostType: 'double' | 'heal' | 'power') => {
+    if (fighter2Boosts <= 0 || !isBattling) return;
+    
+    setFighter2Boosts(prev => prev - 1);
+    
+    if (boostType === 'double') {
+      setFighter2DoubleNextHit(true);
+    } else if (boostType === 'heal') {
+      setFighter2Health(prev => Math.min(fighter2.maxHealth, prev + 15));
+    } else if (boostType === 'power') {
+      setFighter2PowerMode(true);
+      setTimeout(() => setFighter2PowerMode(false), 5000);
+    }
+  };
 
   const startBattle = () => {
     setIsBattling(true);
     setWinner(null);
     setFighter1Health(fighter1.maxHealth);
     setFighter2Health(fighter2.maxHealth);
+    setFighter1Boosts(3);
+    setFighter2Boosts(3);
+    setFighter1DoubleNextHit(false);
+    setFighter2DoubleNextHit(false);
+    setFighter1PowerMode(false);
+    setFighter2PowerMode(false);
 
     // Simulate battle with random attacks
     const battleInterval = setInterval(() => {
       const attacker = Math.random() > 0.5 ? 1 : 2;
-      const baseDamage = attacker === 1 ? fighter1.strength : fighter2.strength;
-      const damage = Math.floor(Math.random() * baseDamage * 0.5) + baseDamage;
-
+      
       if (attacker === 1) {
+        let baseDamage = fighter1.strength;
+        let attackDelay = fighter1.attackSpeed;
+        
+        // Apply power mode (slower but stronger)
+        if (fighter1PowerMode) {
+          baseDamage = Math.floor(baseDamage * 1.5);
+          attackDelay = Math.floor(attackDelay * 1.3);
+        }
+        
+        let damage = Math.floor(Math.random() * baseDamage * 0.5) + baseDamage;
+        
+        // Apply double damage boost
+        if (fighter1DoubleNextHit) {
+          damage *= 2;
+          setFighter1DoubleNextHit(false);
+        }
+
         // Fighter 1 attacks
         setFighter1Punching(true);
         setTimeout(() => {
@@ -62,6 +121,23 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
           return newHealth;
         });
       } else {
+        let baseDamage = fighter2.strength;
+        let attackDelay = fighter2.attackSpeed;
+        
+        // Apply power mode (slower but stronger)
+        if (fighter2PowerMode) {
+          baseDamage = Math.floor(baseDamage * 1.5);
+          attackDelay = Math.floor(attackDelay * 1.3);
+        }
+        
+        let damage = Math.floor(Math.random() * baseDamage * 0.5) + baseDamage;
+        
+        // Apply double damage boost
+        if (fighter2DoubleNextHit) {
+          damage *= 2;
+          setFighter2DoubleNextHit(false);
+        }
+
         // Fighter 2 attacks
         setFighter2Punching(true);
         setTimeout(() => {
@@ -154,6 +230,41 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
                   <span className="text-2xl font-bold text-foreground">{fighter1Health}/{fighter1.maxHealth}</span>
                 </div>
                 <Progress value={(fighter1Health / fighter1.maxHealth) * 100} className="h-4 bg-muted" />
+                
+                {/* Boost buttons for Fighter 1 */}
+                {isBattling && !winner && (
+                  <div className="flex gap-2 mt-2">
+                    <Button
+                      onClick={() => useFighter1Boost('double')}
+                      disabled={fighter1Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                      style={{ opacity: fighter1DoubleNextHit ? 1 : 0.7 }}
+                    >
+                      ⚡ 2x DMG
+                    </Button>
+                    <Button
+                      onClick={() => useFighter1Boost('heal')}
+                      disabled={fighter1Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                    >
+                      💚 +15 HP
+                    </Button>
+                    <Button
+                      onClick={() => useFighter1Boost('power')}
+                      disabled={fighter1Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                      style={{ opacity: fighter1PowerMode ? 1 : 0.7 }}
+                    >
+                      💪 PWR
+                    </Button>
+                  </div>
+                )}
+                <div className="text-center text-sm font-bold" style={{ color: `hsl(var(--${fighter1.color}))` }}>
+                  Boosts: {fighter1Boosts}
+                </div>
               </div>
             </div>
 
@@ -197,6 +308,41 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
                   <span className="text-2xl font-bold text-foreground">{fighter2Health}/{fighter2.maxHealth}</span>
                 </div>
                 <Progress value={(fighter2Health / fighter2.maxHealth) * 100} className="h-4 bg-muted" />
+                
+                {/* Boost buttons for Fighter 2 */}
+                {isBattling && !winner && (
+                  <div className="flex gap-2 mt-2">
+                    <Button
+                      onClick={() => useFighter2Boost('double')}
+                      disabled={fighter2Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                      style={{ opacity: fighter2DoubleNextHit ? 1 : 0.7 }}
+                    >
+                      ⚡ 2x DMG
+                    </Button>
+                    <Button
+                      onClick={() => useFighter2Boost('heal')}
+                      disabled={fighter2Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                    >
+                      💚 +15 HP
+                    </Button>
+                    <Button
+                      onClick={() => useFighter2Boost('power')}
+                      disabled={fighter2Boosts <= 0}
+                      size="sm"
+                      className="flex-1 text-xs"
+                      style={{ opacity: fighter2PowerMode ? 1 : 0.7 }}
+                    >
+                      💪 PWR
+                    </Button>
+                  </div>
+                )}
+                <div className="text-center text-sm font-bold" style={{ color: `hsl(var(--${fighter2.color}))` }}>
+                  Boosts: {fighter2Boosts}
+                </div>
               </div>
             </div>
           </div>

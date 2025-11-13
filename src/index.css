@@ -73,6 +73,13 @@ All colors MUST be HSL.
     --gyurik-pal: 200 65% 55%;
     --cseh-balazs: 190 70% 50%;
     --albrecht-laszlo: 220 60% 55%;
+    --bery-balogh: 25 80% 50%;
+    --keresztes-kornel: 280 70% 55%;
+    --szabo-zoard: 340 75% 50%;
+    --zsonyi: 160 65% 50%;
+    --papszicsu: 10 80% 55%;
+    --krein-sebastyen: 240 70% 50%;
+    --lubrincz-gergo: 30 75% 50%;
     --battle-glow: 0 0% 100%;
     
     --gradient-battle: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.2));

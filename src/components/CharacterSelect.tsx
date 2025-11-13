@@ -37,6 +37,13 @@ import bocskayTanaranoFighter from "@/assets/bocskay-tanarano-fighter.png";
 import gyurikPalFighter from "@/assets/gyurik-pal-fighter.png";
 import csehBalazsFighter from "@/assets/cseh-balazs-fighter.png";
 import albrechtLaszloFighter from "@/assets/albrecht-laszlo-fighter.png";
+import beryBaloghFighter from "@/assets/bery-balogh-fighter.png";
+import keresztesKornelFighter from "@/assets/keresztes-kornel-fighter.png";
+import szaboZoardFighter from "@/assets/szabo-zoard-fighter.png";
+import zsonyiFighter from "@/assets/zsonyi-fighter.png";
+import papszicsuFighter from "@/assets/papszicsu-fighter.png";
+import kreinSebastyenFighter from "@/assets/krein-sebastyen-fighter.png";
+import lubrinczGergoFighter from "@/assets/lubrincz-gergo-fighter.png";
 
 interface CharacterSelectProps {
   onStartBattle: (fighter1: Fighter, fighter2: Fighter) => void;
@@ -369,6 +376,69 @@ export const fighters: Fighter[] = [
     strength: 22,
     attackSpeed: 1700,
     specialStats: "Dementia: +10 HP/10s | Strong vs Ágoston",
+  },
+  {
+    id: "bery-balogh",
+    name: "BÉRY BALOGH",
+    image: beryBaloghFighter,
+    color: "bery-balogh",
+    maxHealth: 120,
+    strength: 35,
+    attackSpeed: 1300,
+  },
+  {
+    id: "keresztes-kornel",
+    name: "KERESZTES KORNÉL",
+    image: keresztesKornelFighter,
+    color: "keresztes-kornel",
+    maxHealth: 90,
+    strength: 14,
+    attackSpeed: 700,
+  },
+  {
+    id: "szabo-zoard",
+    name: "SZABÓ ZOÁRD",
+    image: szaboZoardFighter,
+    color: "szabo-zoard",
+    maxHealth: 100,
+    strength: 15,
+    attackSpeed: 1100,
+  },
+  {
+    id: "zsonyi",
+    name: "ZSONYI",
+    image: zsonyiFighter,
+    color: "zsonyi",
+    maxHealth: 105,
+    strength: 16,
+    attackSpeed: 1050,
+  },
+  {
+    id: "papszicsu",
+    name: "PAPSZICSU",
+    image: papszicsuFighter,
+    color: "papszicsu",
+    maxHealth: 95,
+    strength: 18,
+    attackSpeed: 950,
+  },
+  {
+    id: "krein-sebastyen",
+    name: "KREIN SEBESTYÉN",
+    image: kreinSebastyenFighter,
+    color: "krein-sebastyen",
+    maxHealth: 110,
+    strength: 17,
+    attackSpeed: 1150,
+  },
+  {
+    id: "lubrincz-gergo",
+    name: "LUBRINCZ GERGŐ",
+    image: lubrinczGergoFighter,
+    color: "lubrincz-gergo",
+    maxHealth: 100,
+    strength: 15,
+    attackSpeed: 1000,
   },
 ];
 

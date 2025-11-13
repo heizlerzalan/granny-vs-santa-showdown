@@ -34,7 +34,14 @@ export type FighterType =
   | "bocskay-tanarano"
   | "gyurik-pal"
   | "cseh-balazs"
-  | "albrecht-laszlo";
+  | "albrecht-laszlo"
+  | "bery-balogh"
+  | "keresztes-kornel"
+  | "szabo-zoard"
+  | "zsonyi"
+  | "papszicsu"
+  | "krein-sebastyen"
+  | "lubrincz-gergo";
 
 export interface Fighter {
   id: FighterType;
