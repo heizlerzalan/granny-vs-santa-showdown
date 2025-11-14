@@ -58,6 +58,7 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 12,
     attackSpeed: 1200,
+    class: "Female",
   },
   {
     id: "santa",
@@ -67,6 +68,7 @@ export const fighters: Fighter[] = [
     maxHealth: 120,
     strength: 15,
     attackSpeed: 1400,
+    class: "Tank",
   },
   {
     id: "levente",
@@ -76,6 +78,7 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 30,
     attackSpeed: 1150,
+    class: "Damage",
   },
   {
     id: "mucsy-laci",
@@ -85,6 +88,8 @@ export const fighters: Fighter[] = [
     maxHealth: 95,
     strength: 18,
     attackSpeed: 900,
+    specialStats: "Double damage boost: 4x damage",
+    class: "Fast",
   },
   {
     id: "heizler-zalan",
@@ -95,6 +100,7 @@ export const fighters: Fighter[] = [
     strength: 18,
     attackSpeed: 800,
     specialStats: "+2 speed every 3 seconds",
+    class: "Fast",
   },
   {
     id: "szabo-agoston",
@@ -104,6 +110,7 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 26,
     attackSpeed: 1000,
+    class: "Damage",
   },
   {
     id: "simai-botond",
@@ -113,6 +120,7 @@ export const fighters: Fighter[] = [
     maxHealth: 140,
     strength: 10,
     attackSpeed: 1800,
+    class: "Tank",
   },
   {
     id: "fortnite",
@@ -122,6 +130,7 @@ export const fighters: Fighter[] = [
     maxHealth: 90,
     strength: 13,
     attackSpeed: 800,
+    class: "Fast",
   },
   {
     id: "thanos",
@@ -131,6 +140,7 @@ export const fighters: Fighter[] = [
     maxHealth: 180,
     strength: 25,
     attackSpeed: 2000,
+    class: "Tank",
   },
   {
     id: "tota-oliver",
@@ -140,6 +150,8 @@ export const fighters: Fighter[] = [
     maxHealth: 90,
     strength: 22,
     attackSpeed: 700,
+    specialStats: "Starts with 4 boosts",
+    class: "Fast",
   },
   {
     id: "jakab-istvan",
@@ -149,6 +161,7 @@ export const fighters: Fighter[] = [
     maxHealth: 115,
     strength: 17,
     attackSpeed: 1300,
+    class: "Tank",
   },
   {
     id: "kovacs-david",
@@ -158,6 +171,7 @@ export const fighters: Fighter[] = [
     maxHealth: 150,
     strength: 25,
     attackSpeed: 1950,
+    class: "Tank",
   },
   {
     id: "pal-greta",
@@ -167,6 +181,7 @@ export const fighters: Fighter[] = [
     maxHealth: 95,
     strength: 21,
     attackSpeed: 850,
+    class: "Female",
   },
   {
     id: "fazekas-eszter",
@@ -176,6 +191,7 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 19,
     attackSpeed: 950,
+    class: "Female",
   },
   {
     id: "custom",
@@ -185,6 +201,7 @@ export const fighters: Fighter[] = [
     maxHealth: 100,
     strength: 15,
     attackSpeed: 1000,
+    specialStats: "Balanced fighter with no weaknesses",
   },
   {
     id: "ko",
@@ -194,6 +211,7 @@ export const fighters: Fighter[] = [
     maxHealth: 160,
     strength: 12,
     attackSpeed: 2400,
+    class: "Tank",
   },
   {
     id: "nadler-balazs",
@@ -212,6 +230,7 @@ export const fighters: Fighter[] = [
     maxHealth: 95,
     strength: 18,
     attackSpeed: 900,
+    class: "Female",
   },
   {
     id: "teki-teknos",
@@ -221,6 +240,7 @@ export const fighters: Fighter[] = [
     maxHealth: 150,
     strength: 10,
     attackSpeed: 2200,
+    class: "Sigma",
   },
   {
     id: "kenvo",
@@ -248,6 +268,7 @@ export const fighters: Fighter[] = [
     maxHealth: 70,
     strength: 8,
     attackSpeed: 600,
+    class: "Fast",
   },
   {
     id: "budai-imre",
@@ -257,6 +278,7 @@ export const fighters: Fighter[] = [
     maxHealth: 135,
     strength: 19,
     attackSpeed: 1700,
+    class: "Tank",
   },
   {
     id: "sulyok-csanad",
@@ -284,6 +306,7 @@ export const fighters: Fighter[] = [
     maxHealth: 80,
     strength: 29,
     attackSpeed: 1200,
+    class: "Female",
   },
   {
     id: "nemecz-levente",
@@ -293,6 +316,7 @@ export const fighters: Fighter[] = [
     maxHealth: 220,
     strength: 8,
     attackSpeed: 1700,
+    class: "Tank",
   },
   {
     id: "rampasek-attila",
@@ -320,6 +344,7 @@ export const fighters: Fighter[] = [
     maxHealth: 25,
     strength: 50,
     attackSpeed: 200,
+    class: "Sigma",
   },
   {
     id: "pinter-zsombor",
@@ -338,6 +363,7 @@ export const fighters: Fighter[] = [
     maxHealth: 110,
     strength: 30,
     attackSpeed: 1500,
+    class: "Damage",
   },
   {
     id: "bocskay-tanarano",
@@ -347,6 +373,7 @@ export const fighters: Fighter[] = [
     maxHealth: 60,
     strength: 55,
     attackSpeed: 1600,
+    class: "Female",
   },
   {
     id: "gyurik-pal",
@@ -376,6 +403,7 @@ export const fighters: Fighter[] = [
     strength: 22,
     attackSpeed: 1700,
     specialStats: "Dementia: +10 HP/10s | Strong vs Ágoston",
+    class: "Tank",
   },
   {
     id: "bery-balogh",
@@ -385,6 +413,7 @@ export const fighters: Fighter[] = [
     maxHealth: 120,
     strength: 35,
     attackSpeed: 1300,
+    class: "Damage",
   },
   {
     id: "keresztes-kornel",
@@ -394,6 +423,7 @@ export const fighters: Fighter[] = [
     maxHealth: 90,
     strength: 14,
     attackSpeed: 700,
+    class: "Fast",
   },
   {
     id: "szabo-zoard",
@@ -513,7 +543,7 @@ export const CharacterSelect = ({ onStartBattle }: CharacterSelectProps) => {
                     />
                   </div>
                   
-                  {isSelected && (
+                      {isSelected && (
                     <>
                       <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-current animate-fade-in">
                         <span className={`text-xl font-black text-${fighter.color}`}>
@@ -534,6 +564,17 @@ export const CharacterSelect = ({ onStartBattle }: CharacterSelectProps) => {
                             <span className="text-muted-foreground">SPD:</span>
                             <span className={`text-${fighter.color}`}>{(2000 - fighter.attackSpeed) / 10}</span>
                           </div>
+                          {fighter.class && (
+                            <div className="flex justify-between">
+                              <span className="text-muted-foreground">CLASS:</span>
+                              <span className={`text-${fighter.color}`}>{fighter.class}</span>
+                            </div>
+                          )}
+                          {fighter.specialStats && (
+                            <div className="pt-1 border-t border-border/50">
+                              <span className="text-muted-foreground text-[10px]">{fighter.specialStats}</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </>

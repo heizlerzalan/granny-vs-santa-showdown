@@ -43,6 +43,8 @@ export type FighterType =
   | "krein-sebastyen"
   | "lubrincz-gergo";
 
+export type FighterClass = "Female" | "Tank" | "Sigma" | "Damage" | "Fast";
+
 export interface Fighter {
   id: FighterType;
   name: string;
@@ -52,4 +54,5 @@ export interface Fighter {
   strength: number;
   attackSpeed: number;
   specialStats?: string;
+  class?: FighterClass;
 }
