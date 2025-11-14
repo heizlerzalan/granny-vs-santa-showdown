@@ -590,7 +590,7 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
             <Button
               onClick={startBattle}
               size="lg"
-              className="text-2xl px-12 py-8 bg-gradient-to-r from-granny to-santa hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 font-black"
+              className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 text-2xl px-12 py-8 bg-gradient-to-r from-granny to-santa hover:shadow-lg hover:shadow-accent/50 transition-all duration-300 font-black"
             >
               START BATTLE!
             </Button>
