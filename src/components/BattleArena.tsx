@@ -89,8 +89,9 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
     setWinner(null);
     setFighter1Health(fighter1.maxHealth);
     setFighter2Health(fighter2.maxHealth);
-    setFighter1Boosts(3);
-    setFighter2Boosts(3);
+    // Tota Oliver starts with 4 boosts, others start with 3
+    setFighter1Boosts(fighter1.id === "tota-oliver" ? 4 : 3);
+    setFighter2Boosts(fighter2.id === "tota-oliver" ? 4 : 3);
     setFighter1DoubleNextHit(false);
     setFighter2DoubleNextHit(false);
     setFighter1PowerMode(false);
@@ -266,7 +267,8 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
         
         // Apply double damage boost
         if (fighter1DoubleNextHit) {
-          damage *= 2;
+          // Mucsy Laci gets 4x damage instead of 2x
+          damage *= fighter1.id === "mucsy-laci" ? 4 : 2;
           setFighter1DoubleNextHit(false);
         }
 
@@ -318,7 +320,8 @@ const BattleArena = ({ fighter1, fighter2, onBackToSelect }: BattleArenaProps) =
         
         // Apply double damage boost
         if (fighter2DoubleNextHit) {
-          damage *= 2;
+          // Mucsy Laci gets 4x damage instead of 2x
+          damage *= fighter2.id === "mucsy-laci" ? 4 : 2;
           setFighter2DoubleNextHit(false);
         }
 
