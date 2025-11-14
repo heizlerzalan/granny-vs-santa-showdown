@@ -43,7 +43,7 @@ export type FighterType =
   | "krein-sebastyen"
   | "lubrincz-gergo";
 
-export type FighterClass = "Female" | "Tank" | "Sigma" | "Damage" | "Fast";
+export type FighterClass = "Female" | "Tank" | "Sigma" | "Damage" | "Fast" | "Balanced";
 
 export interface Fighter {
   id: FighterType;

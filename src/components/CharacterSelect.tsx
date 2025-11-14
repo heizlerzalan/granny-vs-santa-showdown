@@ -221,6 +221,7 @@ export const fighters: Fighter[] = [
     maxHealth: 105,
     strength: 16,
     attackSpeed: 1200,
+    class: "Sigma",
   },
   {
     id: "nadler-somogyi-laura",
@@ -230,7 +231,7 @@ export const fighters: Fighter[] = [
     maxHealth: 95,
     strength: 18,
     attackSpeed: 900,
-    class: "Female",
+    class: "Sigma",
   },
   {
     id: "teki-teknos",
@@ -411,7 +412,7 @@ export const fighters: Fighter[] = [
     image: beryBaloghFighter,
     color: "bery-balogh",
     maxHealth: 120,
-    strength: 35,
+    strength: 29,
     attackSpeed: 1300,
     class: "Damage",
   },
